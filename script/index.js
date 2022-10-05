@@ -4,11 +4,13 @@ const loadingDOM=document.querySelector(".loading-text")
 const taskInputDOM=document.querySelector(".task-input")
 const formDOM=document.querySelector(".task-form")
 
+const baseUrl="https://hemlotodo.herokuapp.com"
+
 //Load task from api/tasks/
 const showTasks=()=>{
   loadingDOM.style.visibility="visible";
   try{
-    fetch('/api/tasks/',{method:"GET"}).then(data=>{
+    fetch(`${baseUrl}/api/tasks/`,{method:"GET"}).then(data=>{
       return data.json()
     }).then((data)=>{
       // console.log(data)
@@ -57,7 +59,7 @@ tasksDOM.addEventListener("click",async(e)=>{
   const taskID=el.id
   if(e.target.type==="checkbox"){
     try{
-      await fetch(`/api/tasks/${taskID}`,{method:"PATCH",headers:{
+      await fetch(`${baseUrl}/api/tasks/${taskID}`,{method:"PATCH",headers:{
           "Content-type":"application/json"
       },body:JSON.stringify({
           "completed":e.target.checked
@@ -71,7 +73,7 @@ tasksDOM.addEventListener("click",async(e)=>{
   if(e.target.type==="image"){
     try{
       loadingDOM.style.visibility="visible"
-      await fetch(`/api/tasks/${taskID}/`,{method:"Delete"})
+      await fetch(`${baseUrl}/api/tasks/${taskID}/`,{method:"Delete"})
       showTasks()
     }catch(err){
       console.log(err)
@@ -85,7 +87,7 @@ tasksDOM.addEventListener("click",async(e)=>{
 formDOM.addEventListener("submit",async(e)=>{
   const taskName=taskInputDOM.value
   try{
-    await fetch('/api/tasks/',{method:"POST",headers:{
+    await fetch(`${baseUrl}/api/tasks/`,{method:"POST",headers:{
       "Content-type":"application/json"
     },body:JSON.stringify({
       "name":taskName,
