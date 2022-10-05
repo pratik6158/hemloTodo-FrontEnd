@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+  background: #F2F2F2;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.heading {
+  font-size: 2em;
+  background: white;
+  margin: 0;
+  padding: 0.1em;
+  text-align: center;
+}
+
+.form-control1 {
+  display: flex;
+  font-weight: bold;
+}
+.form-control1 .task-edit-id {
+  position: relative;
+  bottom: 1em;
+  left: 1em;
+}
+
+.form-control2 {
+  display: flex;
+  position: relative;
+  bottom: 1em;
+}
+.form-control2 label {
+  font-weight: bold;
+}
+.form-control2 .task-edit-name {
+  position: relative;
+  left: 1.5em;
+  cursor: pointer;
+}
+
+.form-control3 label {
+  font-weight: bold;
+}
+.form-control3 .task-edit-completed {
+  cursor: pointer;
+}
+
+.task-edit-btn {
+  position: relative;
+  top: 1em;
+  border: 1px solid black;
+  border-radius: 20%;
+  cursor: pointer;
+}/*# sourceMappingURL=task.css.map */

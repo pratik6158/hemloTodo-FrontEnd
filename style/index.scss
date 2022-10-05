@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body{
+    background: #F2F2F2;
+    margin: 0;
+    font-family: 'Poppins';
+}
+    
+.heading{
+    font-size: 2em;
+    background: white;
+    margin: 0;
+    padding: .1em;
+    text-align: center;
+}
+
+.main{
+    text-align: center;
+    .task-form{
+        padding: 0;
+        position: relative;
+        top: 2em;
+        display: flex;
+        justify-content: center;
+        .task-input{
+            height: 2em;
+            padding: .3em;
+            border: 1px solid black;
+            border-radius: 5%;
+        }
+        .submit-btn{
+
+            height: 3em;
+            color: white;
+            background: blue;
+            margin-left: 1em;
+            border: 1px solid black;
+            border-radius: 20%;
+            cursor: pointer;
+        }    
+    }
+}
+
+.task-container{
+    position:relative;
+    justify-content: left;
+    left: 4em;
+    padding-left: 2em;
+    top: 1em;
+}
+
+.outer-container{
+    display: flex;
+    justify-content: left;
+    .single-task{
+        display: flex;
+        position: relative;
+        right: 4.3em;
+        .delete-btn{
+            height: 2em;
+            position: relative;
+            top: 1.3em;
+            // left: 3em;
+        }
+        .edit-btn{
+            position: relative;
+            top: 1.2em;
+            right: 1em;
+        }
+    }
+
+}
+
+
+.index-checkbox{
+    cursor: pointer;
+}
