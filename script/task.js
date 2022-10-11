@@ -6,7 +6,7 @@ const completedDOM=document.querySelector('.task-edit-completed')
 const alertDOM=document.querySelector('.form-alert')
 const submitBtnDOM=document.querySelector('.task-edit-btn')
 
-const baseUrl="https://hemlotodo.herokuapp.com"
+const baseUrl="https://hemlotodo-backend.vercel.app"
 
 
 console.log(id)

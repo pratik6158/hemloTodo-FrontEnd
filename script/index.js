@@ -4,7 +4,7 @@ const loadingDOM=document.querySelector(".loading-text")
 const taskInputDOM=document.querySelector(".task-input")
 const formDOM=document.querySelector(".task-form")
 
-const baseUrl="https://hemlotodo.herokuapp.com"
+const baseUrl="https://hemlotodo-backend.vercel.app"
 
 //Load task from api/tasks/
 const showTasks=()=>{
